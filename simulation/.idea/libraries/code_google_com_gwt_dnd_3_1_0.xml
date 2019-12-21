@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="code.google.com:gwt-dnd:3.1.0" type="repository">
+    <properties maven-id="code.google.com:gwt-dnd:3.1.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/code/google/com/gwt-dnd/3.1.0/gwt-dnd-3.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="simulation.jnlp">
+  <information>
+    <title>simulation</title>
+    <vendor>Unknown</vendor>
+    <description>simulation</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="json-simple-1.1.jar" size="16046" download="eager" />
+    <jar href="org.json.simple-0.4.jar" size="23361" download="eager" />
+    <jar href="simulation.jar" size="22634" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="control.Main"  name="simulation" />
+  <update check="background"/>
+</jnlp>

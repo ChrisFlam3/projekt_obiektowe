@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<SplitPane dividerPositions="0.25181347150259065" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.Controller">
+  <items>
+    <AnchorPane maxHeight="720.0" maxWidth="240.0" minHeight="720.0" minWidth="240.0" prefHeight="720.0" prefWidth="240.0">
+         <children>
+            <Button fx:id="pauseButton" layoutX="51.0" layoutY="116.0" mnemonicParsing="false" onAction="#pauseButtonAction" text="Pause" />
+            <Button fx:id="playButton" layoutX="152.0" layoutY="116.0" mnemonicParsing="false" onAction="#playButtonAction" text="Play" />
+            <Slider fx:id="speedSlider" layoutX="51.0" layoutY="61.0" max="1000.0" min="20.0" onMouseReleased="#testing" showTickLabels="true" />
+            <Label layoutX="53.0" layoutY="25.0" text="Animation Speed">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="638.0" text="Help: &#10;Camera moving: mouse drag&#10;Camera zoom: mouse scroll&#10;Select: right mouse button" textAlignment="CENTER" />
+            <StackedAreaChart fx:id="animalNumChart" layoutX="3.0" layoutY="154.0" prefHeight="150.0" prefWidth="234.0" title="Animals number over time">
+              <xAxis>
+                <NumberAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </StackedAreaChart>
+            <StackedAreaChart fx:id="GrassNumChart" layoutX="5.0" layoutY="304.0" prefHeight="150.0" prefWidth="234.0" title="Grass number over time">
+               <xAxis>
+                  <NumberAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </StackedAreaChart>
+            <Label layoutX="19.0" layoutY="454.0" prefHeight="17.0" prefWidth="119.0" text="Dominating genotype:" />
+            <Label layoutX="19.0" layoutY="488.0" text="Avarage life time:" />
+            <Label layoutX="19.0" layoutY="506.0" text="Avarage energy:" />
+            <Label layoutX="19.0" layoutY="471.0" prefHeight="17.0" prefWidth="146.0" text="Avarage children number:" />
+            <Label fx:id="dominatingGenotype" layoutX="138.0" layoutY="454.0" />
+            <Label fx:id="lifeTimeExpectancy" layoutX="111.0" layoutY="488.0" />
+            <Label fx:id="avarageEnergy" layoutX="106.0" layoutY="506.0" />
+            <Label fx:id="avarageChildrenNumber" layoutX="157.0" layoutY="471.0" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0">
+         <children>
+            <Canvas fx:id="simulationCanvas" height="720.0" layoutX="-1.0" layoutY="-1.0" onMouseDragged="#drag" onMousePressed="#press" onScroll="#scroll" width="720.0" />
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>
